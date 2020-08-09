@@ -10,12 +10,17 @@ class App extends Component {
             { name: "Stephanie", age: "26" }
         ]
     };
+
+    switchNameHandler = () => {
+        console.log("Was clicked");
+    };
+
     render() {
         return (
             <div className="App">
                 <h1> Hi, I am React App </h1>
                 <p>This is working too!</p>
-                <button>Switch Name</button>
+                <button onClick={this.switchNameHandler}>Switch Name</button>
                 <Person
                     name={this.state.persons[0].name}
                     age={this.state.persons[0].age}
@@ -32,13 +37,6 @@ class App extends Component {
                 />
             </div>
         );
-        // return React.createElement(
-        //     "div",
-        //     {
-        //         className: "App"
-        //     },
-        //     React.createElement("h1", null, "Does this work now?")
-        // );
     }
 }
 
